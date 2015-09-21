@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ddst.yp.makeachoice.MainActivity">
+     
+	<include layout="@layout/toolbar_title"
+	    android:id="@+id/toolbar"/>
+	
+	<RelativeLayout 
+	    android:id="@+id/layout_pagecontent"
+	    android:layout_below="@id/toolbar"
+	    android:layout_width="match_parent"
+	    android:layout_height="fill_parent"
+	    android:padding="@dimen/activity_horizontal_margin"
+	    >
+	    
+	    <LinearLayout 
+	        android:id="@+id/layout_controls"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:baselineAligned="false"
+	        >
+	        
+	        <LinearLayout 
+	            android:id="@+id/layout_control_add"
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            >
+	            
+	            <Button 
+	                android:id="@+id/button_add"
+	                style="@style/ButtonAddStyle"
+	                android:text="@string/add"
+	                android:layout_height="wrap_content"
+	                android:layout_width="fill_parent"
+	                android:layout_gravity="center"
+	                android:textColor="#ffffff"
+	                />
+	            
+	        </LinearLayout>
+	        
+	        <LinearLayout 
+	            android:id="@+id/layout_control_randomize"
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            >
+	            
+	            <Button 
+	                android:id="@+id/button_randomize"
+	                style="@style/ButtonRandomizeStyle"
+	                android:text="@string/randomize"
+	                android:layout_height="wrap_content"
+	                android:layout_width="fill_parent"
+	                android:layout_gravity="center"
+	                android:textColor="#ffffff"
+	                />
+	            
+	        </LinearLayout>
+	    </LinearLayout>
+		 
+	    <EditText 
+	        android:id="@+id/edittext_choice_input"
+	        android:layout_below="@id/layout_controls"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:inputType="text"
+	        style="@style/Widget.AppCompat.EditText"
+	        android:hint="@string/edittext_choice_input_hint"
+	        android:layout_marginBottom="@dimen/activity_vertical_margin"
+	        android:imeOptions="actionDone"
+	        />
+	    
+	    <ListView 
+	        android:id="@+id/listview_choices"
+	        android:layout_below="@id/edittext_choice_input"
+	        android:layout_width="match_parent"
+	        android:layout_height="fill_parent"
+	        android:divider="#c0c0c0"
+	        android:dividerHeight="1dp"
+	        >
+	    </ListView>
+	    
+	</RelativeLayout>
+
+</RelativeLayout>

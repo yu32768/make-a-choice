@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="decided_text_color">#60d2f2</color>
+    <color name="selected_text_color">#60d2f2</color>
+    <color name="default_text_color">@color/primary_material_dark</color>
+</resources>
